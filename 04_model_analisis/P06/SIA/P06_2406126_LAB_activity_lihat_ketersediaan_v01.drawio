@@ -1,0 +1,120 @@
+<mxfile host="65bd71144e">
+    <diagram id="lihat_ketersediaan" name="Activity Lihat Ketersediaan Peralatan (LAB-UC01)">
+        <mxGraphModel dx="1029" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="820" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="pool" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=1;" value="Sistem Informasi Akademik" vertex="1">
+                    <mxGeometry height="760" width="880" x="40" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="laneDosen" parent="pool" style="swimlane;startSize=30;" value="Dosen" vertex="1">
+                    <mxGeometry height="730" width="220" y="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="start" parent="laneDosen" style="ellipse;fillColor=#000000;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="95" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a1" parent="laneDosen" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Memasukkan nilai mata kuliah" vertex="1">
+                    <mxGeometry height="40" width="140" x="40" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3" parent="laneDosen" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Melengkapi nilai mata kuliah yang belum lengkap" vertex="1">
+                    <mxGeometry height="50" width="160" x="30" y="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="laneDosen" source="start" target="a1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="laneSistem" parent="pool" style="swimlane;startSize=30;" value="Sistem" vertex="1">
+                    <mxGeometry height="730" width="220" x="220" y="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="a2" parent="laneSistem" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Menyimpan nilai" vertex="1">
+                    <mxGeometry height="40" width="140" x="40" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1" parent="laneSistem" style="rhombus;whiteSpace=wrap;html=1;" value="Nilai sudah&lt;br&gt;lengkap?" vertex="1">
+                    <mxGeometry height="60" width="120" x="50" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="m1" parent="laneSistem" style="rhombus;whiteSpace=wrap;html=1;" value="" vertex="1">
+                    <mxGeometry height="40" width="40" x="90" y="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="a5" parent="laneSistem" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Menyiapkan publikasi hasil studi" vertex="1">
+                    <mxGeometry height="40" width="140" x="40" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="fork1" parent="laneSistem" style="shape=line;strokeWidth=6;rotation=0;" value="" vertex="1">
+                    <mxGeometry height="10" width="200" x="10" y="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6" parent="laneSistem" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Menerbitkan KHS pada portal akademik" vertex="1">
+                    <mxGeometry height="60" width="90" x="10" y="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="a7" parent="laneSistem" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Mengirim pemberitahuan hasil studi kepada mahasiswa" vertex="1">
+                    <mxGeometry height="60" width="90" x="120" y="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="join1" parent="laneSistem" style="shape=line;strokeWidth=6;rotation=0;" value="" vertex="1">
+                    <mxGeometry height="10" width="200" x="10" y="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="laneSistem" source="a2" target="d1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" edge="1" parent="laneSistem" source="d1" target="m1" value="[lengkap]">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e10" edge="1" parent="laneSistem" source="fork1" target="a6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" edge="1" parent="laneSistem" source="fork1" target="a7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" edge="1" parent="laneSistem" source="a5" target="fork1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12" edge="1" parent="laneSistem" source="a6" target="join1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e13" edge="1" parent="laneSistem" source="a7" target="join1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="laneAdmin" parent="pool" style="swimlane;startSize=30;" value="Admin Akademik" vertex="1">
+                    <mxGeometry height="730" width="220" x="440" y="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4" parent="laneAdmin" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Memeriksa dan mengesahkan nilai" vertex="1">
+                    <mxGeometry height="40" width="140" x="40" y="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="laneMhs" parent="pool" style="swimlane;startSize=30;" value="Mahasiswa" vertex="1">
+                    <mxGeometry height="730" width="220" x="660" y="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="a8" parent="laneMhs" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" value="Melihat KHS" vertex="1">
+                    <mxGeometry height="40" width="140" x="40" y="605" as="geometry"/>
+                </mxCell>
+                <mxCell id="end" parent="laneMhs" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="95" y="680" as="geometry"/>
+                </mxCell>
+                <mxCell id="e15" edge="1" parent="laneMhs" source="a8" target="end">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="pool" source="d1" target="a3" value="[belum lengkap]">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="pool" source="a1" target="a2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="pool" source="a3" target="m1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" edge="1" parent="pool" source="m1" target="a4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" edge="1" parent="pool" source="a4" target="a5">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="470" y="400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e14" edge="1" parent="pool" source="join1" target="a8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
